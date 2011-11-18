@@ -540,9 +540,12 @@ params   = _params;
     }
     
     _modalBackgroundView.frame = window.frame;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelDialogByTappingOutside:)];
+    [_modalBackgroundView addGestureRecognizer:tapGesture];
+    [tapGesture release];
+    
     [_modalBackgroundView addSubview:self];
     [window addSubview:_modalBackgroundView];
-    
     [window addSubview:self];
     
     [self dialogWillAppear];
@@ -556,6 +559,11 @@ params   = _params;
     [UIView commitAnimations];
     
     [self addObservers];
+}
+
+- (void)cancelDialogByTappingOutside:(id)sender {
+    
+    [self dialogDidCancel:[NSURL URLWithString:_serverURL]];
 }
 
 - (void)dismissWithSuccess:(BOOL)success animated:(BOOL)animated {
