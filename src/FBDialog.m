@@ -640,6 +640,12 @@ params   = _params;
         [self showSpinner];	
         [self showWebView];
     }
+	
+	UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    if (!window) {
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    }
+
     _modalBackgroundView.frame = window.frame;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelDialogByTappingOutside:)];
     [_modalBackgroundView addGestureRecognizer:tapGesture];
