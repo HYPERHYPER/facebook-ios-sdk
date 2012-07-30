@@ -115,7 +115,7 @@
  * Your application should implement this delegate to receive session callbacks.
  */
 @protocol FBSessionDelegate <NSObject>
-
+@optional
 /**
  * Called when the user successfully logged in.
  */
