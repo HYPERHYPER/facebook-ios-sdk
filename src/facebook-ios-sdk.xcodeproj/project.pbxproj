@@ -248,10 +248,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-                                ARCHS = (
-                                  "$(ARCHS_STANDARD_32_BIT)",
-                                  armv6,
-                                );
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -259,8 +259,8 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = facebook_ios_sdk;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -272,16 +272,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-                                ARCHS = (
-                                  "$(ARCHS_STANDARD_32_BIT)",
-                                  armv6,
-                                );
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = facebook_ios_sdk;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -318,6 +318,41 @@
 			};
 			name = Release;
 		};
+		301E708115C65F0D00B26775 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
+		301E708215C65F0D00B26775 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				DSTROOT = /tmp/facebook_ios_sdk.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = facebook_ios_sdk;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,6 +361,7 @@
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
 				1DEB922008733DC00010E9CD /* Release */,
+				301E708215C65F0D00B26775 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -335,6 +371,7 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+				301E708115C65F0D00B26775 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
