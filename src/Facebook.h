@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+#import "NSObject+SBJSON.h"
+
 #import "FBLoginDialog.h"
 #import "FBRequest.h"
 
